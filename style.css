@@ -1,0 +1,61 @@
+/* Base styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #151a22;
+    color: #c9d1d9;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    font-size: 18px;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    padding: 20px;
+}
+
+.hr {
+    opacity: 0.5;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    color: #c9d1d9;
+    margin-top: 0;
+}
+
+/* Links */
+a {
+    color: #BB86FC;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive design */
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 20px; /* Increase font size on mobile */
+    }
+    
+    .container {
+        padding: 10px;  /* Less padding on mobile */
+        margin: 0; /* Remove margin on mobile */
+    }
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}

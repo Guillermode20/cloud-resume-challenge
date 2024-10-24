@@ -58,6 +58,7 @@
             <li>All code written by me in raw HTML, CSS, and JavaScript</li>
             <li>Hosted on an AWS S3 Bucket, using CloudFront for HTTPS security, and Route 53 for the domain name</li>
         </ul>
+        <p>This site has also been visited {{ visitNumber }} times!</p>
     </details>
     </br>
 
@@ -205,6 +206,18 @@
     </footer>
     </div> 
     <script>
+        require('dotenv').config();
+        async function logVisit() {
+            await fetch("https://ygftecjddi.execute-api.eu-west-2.amazonaws.com/logvisist", {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' }
+            });
+        }
+
+        // Trigger visit logging
+        logVisit();
+
+
         function copyToClipboard(text, type) {
             navigator.clipboard.writeText(text).then(() => {
                 // Update tooltip text

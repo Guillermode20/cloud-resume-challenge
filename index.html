@@ -5,47 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My CV</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <style>
-        .copyable, .hoverable {
-            cursor: pointer;
-            position: relative;
-            display: inline-block;
-        }
-        
-        .tooltip {
-            visibility: hidden;
-            position: absolute;
-            background-color: #333;
-            color: white;
-            padding: 5px 10px;
-            border-radius: 4px;
-            font-size: 14px;
-            bottom: 125%;
-            left: 50%;
-            transform: translateX(-50%);
-            white-space: nowrap;
-            z-index: 1;
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-
-        .copyable:hover .tooltip,
-        .hoverable:hover .tooltip {
-            visibility: visible;
-            opacity: 1;
-        }
-
-        /* Style for social icons container */
-        .social-icon {
-            display: inline-block;
-            position: relative;
-        }
-
-        /* Ensure SVG inherits hover cursor */
-        .social-icon svg {
-            cursor: pointer;
-        }
-    </style>
 </head>
 <body>
     <div class="container">
@@ -84,6 +43,22 @@
             </div>
         </ul>
     </nav>
+    <details>
+        <summary>
+            <a class="website-details">Website Details</a>
+            <style>
+                .website-details {
+                    color: #c9d1d9;
+                    text-decoration: none;
+                }
+            </style>
+        </summary>
+        <p>This website is both a functional web CV and a demonstration of my technical skills.</p>
+        <ul>
+            <li>All code written by me in raw HTML, CSS, and JavaScript</li>
+            <li>Hosted on an AWS S3 Bucket, using CloudFront for HTTPS security, and Route 53 for the domain name</li>
+        </ul>
+    </details>
     </br>
 
 
@@ -172,6 +147,9 @@
         <ul>
             <li>Following the <a href="https://cloudresumechallenge.dev/docs/the-challenge/aws/" target="_blank">Cloud Resume Challenge</a></li>
         </ul>
+        <ul>
+            <li><a href="https://github.com/Guillermode20/cloud-resume-challenge" target="_blank">GitHub Repository</a></li>
+        </ul>
         </li>
     </ul>
 
@@ -219,6 +197,7 @@
     <!-- Footer -->
     <footer class="center-text">
         <hr>
+        <a href="https://github.com/Guillermode20/cloud-resume-challenge" target="_blank">View Source on GitHub</a> 
         <p>Will Hick - 2024</p>
         <p>
             <a href="https://opensource.org/licenses/MIT" target="_blank">MIT License</a>

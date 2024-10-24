@@ -1,7 +1,7 @@
 /* Base styles */
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #121518;
+    background-color: #181A1b;
     color: #c9d1d9;
     margin: 0;
     padding: 0;
@@ -14,10 +14,10 @@ body {
     max-width: 700px;
     margin: 20px auto;
     padding: 40px;
-    border-radius: 48px;
-    background: #121518;
-    box-shadow:  7px 7px 14px #0e1012,
-                -7px -7px 14px #161a1e;
+    border-radius: 50px;
+    background: linear-gradient(145deg, #161718, #1a1c1d);
+    box-shadow:  10px 10px 19px #141617,
+                -10px -10px 19px #1c1e1f;
 
 }
 
@@ -88,3 +88,43 @@ a:hover {
 .center-text {
     text-align: center;
 }
+
+.copyable, .hoverable {
+            cursor: pointer;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .tooltip {
+            visibility: hidden;
+            position: absolute;
+            background-color: #333;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 14px;
+            bottom: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+            white-space: nowrap;
+            z-index: 1;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .copyable:hover .tooltip,
+        .hoverable:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* Style for social icons container */
+        .social-icon {
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Ensure SVG inherits hover cursor */
+        .social-icon svg {
+            cursor: pointer;
+        }

@@ -206,18 +206,6 @@
     </footer>
     </div> 
     <script>
-        require('dotenv').config();
-        async function logVisit() {
-            await fetch("https://ygftecjddi.execute-api.eu-west-2.amazonaws.com/logvisist", {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' }
-            });
-        }
-
-        // Trigger visit logging
-        logVisit();
-
-
         function copyToClipboard(text, type) {
             navigator.clipboard.writeText(text).then(() => {
                 // Update tooltip text

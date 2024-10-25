@@ -210,11 +210,13 @@
     </footer>
     </div> 
     <script>
+        const visitsApiUrl = 'your-api-url';
+
         async function updateVisitorCount() {
             const countElement = document.getElementById('visitor-count');
 
             try {
-                const response = await fetch('https://rc9gzs2arj.execute-api.eu-west-2.amazonaws.com/production/visits', { method: 'GET' });
+                const response = await fetch(visitsApiUrl, { method: 'GET' });
                 
                 if (!response.ok) {
                     throw new Error('Network response was not ok');

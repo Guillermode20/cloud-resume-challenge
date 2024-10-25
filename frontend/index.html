@@ -210,7 +210,8 @@
     </footer>
     </div> 
     <script>
-        const visitsApiUrl = 'your-api-url';
+        require('dotenv').config();
+        const visitsApiUrl = process.env.VISIT_COUNT_API;
 
         async function updateVisitorCount() {
             const countElement = document.getElementById('visitor-count');

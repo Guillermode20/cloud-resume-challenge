@@ -57,8 +57,10 @@
         <ul>
             <li>All code written by me in raw HTML, CSS, and JavaScript</li>
             <li>Hosted on an AWS S3 Bucket, using CloudFront for HTTPS security, and Route 53 for the domain name</li>
+            <li>Integrated with AWS Lambda for a Python function and connected with AWS API Gateway, allowing me to tell you this site has been 
+                visited <strong><span id="visitor-count">Loading...</span> times</strong>, with that visit count being fetched from AWS DynamoDB.</li>
+            </li>
         </ul>
-        <p>Visitor Count: <span id="visitor-count">Loading...</span></p>
 
         <script src="visitor-counter.js"></script>
     </details>
@@ -218,7 +220,8 @@
                     throw new Error('Network response was not ok');
                 }
 
-                const count = await response.text();
+                const data = await response.json();
+                const count = data.body;
                 countElement.innerText = count;
 
             } catch (error) {

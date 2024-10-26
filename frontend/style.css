@@ -1,7 +1,6 @@
-/* Base styles */
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #181A1b;
+    background-color: #121518;
     color: #c9d1d9;
     margin: 0;
     padding: 0;
@@ -9,26 +8,23 @@ body {
     font-size: 16px;
 }
 
-/* Container */
 .container {
     max-width: 700px;
     margin: 20px auto;
     padding: 40px;
-    border-radius: 50px;
-
+    border-radius: 10px;
+    border: 1px solid rgba(201, 209, 217, 1);
 }
 
 .hr {
     opacity: 0.5;
 }
 
-/* Headings */
 h1, h2, h3, h4, h5, h6 {
     color: #c9d1d9;
     margin-top: 0;
 }
 
-/* Links */
 a {
     color: #BB86FC;
     text-decoration: none;
@@ -38,36 +34,35 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Responsive design */
 @media only screen and (max-width: 600px) {
     body {
-        font-size: 20px; /* Increase font size on mobile */
-        padding: 10px; /* Add padding to prevent content from touching the edges */
-        margin: auto 0; /* Remove margin */
+        font-size: 20px;
+        padding: 10px;
+        margin: auto 0;
     }
     
     .container {
-        padding: 20px;  /* Adjust padding for better spacing */
-        margin: 0; /* Remove margin */
+        padding: 20px;
+        margin: 0;
     }
 
     .navbar {
         display: flex;
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center items */
+        flex-direction: column;
+        align-items: center;
         top: 0;
         width: 100%;
-        background-color: #121518; /* Ensure the navbar has a background color */
-        padding: 10px 0; /* Add some padding for better appearance */
-        z-index: 1000; /* Ensure the navbar is above other content */
+        background-color: #121518;
+        padding: 10px 0;
+        z-index: 1000;
     }
 
     .navbar ul {
-        margin: 5px 0; /* Add margin between navbar items */
+        margin: 5px 0;
     }
 
     h1 {
-        margin-top: 60px; /* Add margin to the top of the title to prevent clashing with navbar */
+        margin-top: 60px;
     }
 }
 
@@ -87,41 +82,39 @@ a:hover {
 }
 
 .copyable, .hoverable {
-            cursor: pointer;
-            position: relative;
-            display: inline-block;
-        }
-        
-        .tooltip {
-            visibility: hidden;
-            position: absolute;
-            background-color: #333;
-            color: white;
-            padding: 5px 10px;
-            border-radius: 4px;
-            font-size: 14px;
-            bottom: 125%;
-            left: 50%;
-            transform: translateX(-50%);
-            white-space: nowrap;
-            z-index: 1;
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+}
 
-        .copyable:hover .tooltip,
-        .hoverable:hover .tooltip {
-            visibility: visible;
-            opacity: 1;
-        }
+.tooltip {
+    visibility: hidden;
+    position: absolute;
+    background-color: #333;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
 
-        /* Style for social icons container */
-        .social-icon {
-            display: inline-block;
-            position: relative;
-        }
+.copyable:hover .tooltip,
+.hoverable:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
 
-        /* Ensure SVG inherits hover cursor */
-        .social-icon svg {
-            cursor: pointer;
-        }
+.social-icon {
+    display: inline-block;
+    position: relative;
+}
+
+.social-icon svg {
+    cursor: pointer;
+}

@@ -15,9 +15,6 @@ body {
     margin: 20px auto;
     padding: 40px;
     border-radius: 50px;
-    background: linear-gradient(145deg, #161718, #1a1c1d);
-    box-shadow:  10px 10px 19px #141617,
-                -10px -10px 19px #1c1e1f;
 
 }
 

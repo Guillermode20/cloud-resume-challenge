@@ -210,14 +210,11 @@
     </footer>
     </div> 
     <script>
-        require('dotenv').config();
-        const visitsApiUrl = process.env.VISIT_COUNT_API;
-
         async function updateVisitorCount() {
             const countElement = document.getElementById('visitor-count');
 
             try {
-                const response = await fetch(visitsApiUrl, { method: 'GET' });
+                const response = await fetch("https://rc9gzs2arj.execute-api.eu-west-2.amazonaws.com/production/visits", { method: 'GET' });
                 
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
@@ -269,5 +266,4 @@
             footer.insertBefore(urlContainer, footer.lastElementChild);
         });
     </script>
-</body>
 </html>

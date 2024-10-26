@@ -1,6 +1,6 @@
 # My CV Website
 
-This repository contains the source code for my personal CV website. The website is a demonstration of my technical skills and includes my contact information, social media links, and a visit counter.
+This repository contains the source code for my personal CV website.
 
 ## Project Structure
 

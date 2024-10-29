@@ -27,7 +27,7 @@ jobs:
     
     - name: Sync S3 bucket
       run: |
-        aws s3 sync cloud-resume-challenge/ s3://will-hick-cloud-cv --delete --exclude "*" --include "index.html" --include "style.css"
+        aws s3 sync ./cloud-resume-challenge/ s3://will-hick-cloud-cv --delete --exclude "*" --include "index.html" --include "style.css"
 
     - name: Invalidate CloudFront cache
       run: |

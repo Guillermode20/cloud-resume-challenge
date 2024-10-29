@@ -43,9 +43,10 @@
             </div>
         </ul>
     </nav>
+    <br/>
     <details>
         <summary>
-            <a class="website-details">Website Details</a>
+            <a id="website-details" class="website-details"><strong>Website Details</strong></a>
             <style>
                 .website-details {
                     color: #c9d1d9;
@@ -55,13 +56,15 @@
         </summary>
         <p>This website is both a functional web CV and a demonstration of my technical skills.</p>
         <ul>
-            <li>All code written by me in raw HTML, CSS, and JavaScript</li>
-            <li>Hosted on an AWS S3 Bucket, using CloudFront for HTTPS security, and Route 53 for the domain name</li>
-            <li>Integrated with AWS Lambda for a Python function and connected with AWS API Gateway, allowing me to tell you this site has been 
-                visited <strong><span id="visitor-count">Loading...</span> times</strong>, with that visit count being fetched from AWS DynamoDB.</li>
+            <li>All code written from scratch in HTML, CSS, & JavaScript</li>
+            <li>100% running on <strong>Amazon Web Services</strong></li>
+            <li>Hosted on an Amazon Web Services (AWS) S3 Bucket, using AWS CloudFront for HTTPS security, and AWS Route 53 for the domain name</li>
+            <li>Using a Python AWS Lambda function and connected with AWS API Gateway, allowing me to tell you this site has been 
+                visited <strong><span id="visitor-count">Loading...</span> times</strong>, with that visit count being fetched from AWS DynamoDB</li>
             </li>
+            <li>All AWS infrastructure managed through <strong>Terraform</strong>, enabling automation, consistency, and version control with Git</li>
+            <li>All updates to frontend are pushed live automatically with <strong>GitHub Actions</strong></li>
         </ul>
-
         <script src="visitor-counter.js"></script>
     </details>
     </br>
@@ -144,10 +147,10 @@
         </li>
         <li><strong>Cloud CV Website (you're looking at it!)</strong>
         <ul>
-            <li>A static cloud CV website deployed on Amazon S3, to familiarise myself with DevOps processes.</li>
+            <li>A static cloud CV website deployed on AWS, to familiarise myself with DevOps processes.</li>
         </ul>
         <ul>
-            <li>Written in HTML and CSS, with a little JavaScript for the navbar. Purposefully light and wonderfully responsive.</li>
+            <li><a href="#website-details">Details of project can be read at the top of this page.</a></li>
         </ul>
         <ul>
             <li>Following the <a href="https://cloudresumechallenge.dev/docs/the-challenge/aws/" target="_blank">Cloud Resume Challenge</a></li>
@@ -156,38 +159,42 @@
             <li><a href="https://github.com/Guillermode20/cloud-resume-challenge" target="_blank">GitHub Repository</a></li>
         </ul>
         </li>
+        <li><a href="https://github.com/Guillermode20"><strong>More on my GitHub</strong></a></li>
     </ul>
 
     <!-- Technical Skills-->
     <h2>Technical Skills</h2>
     <hr>
-    <h4>Languages:</h4>
+        <h3>DevOps and Cloud</h3>
+        <ul>
+            <li><strong>Docker</strong>: Experience with containerization for deployment and development</li>
+            <li><strong>AWS</strong>: Comfortable with AWS services and operations, currently studying for the AWS Cloud Practitioner Certification</li>
+            <li><strong>GitHub Actions</strong>: Experience with writing Actions YML files to automate deployment (such as changes to this site's frontend)</li>
+            <li><strong>Linux</strong>: Comfortable with the command line and basic system administration</li>
+        </ul>
+        <h3>Programming Languages</h3>
         <ul>
             <li><strong>Python</strong>: Proficient in syntax, OOP, data structures, algorithms, and common libraries</li>
             <li><strong>HTML/CSS</strong>: Semantic HTML5, modern CSS3, responsive design, Bootstrap, Tailwind CSS</li>
             <li><strong>JavaScript</strong>: React with Vite, Node.js, Express.js</li>
-        </ul>  
-        <h4>Frameworks:</h4>
+        </ul>
+        <h3>Frameworks and Libraries</h3>
         <ul>
             <li><strong>Django and Flask</strong>: Experience with REST Frameworks for API development</li>
             <li><strong>React/Preact</strong>: Experience with primarily Preact (a fork of React which is very similar) for responsive and lightweight frontend development</li>
         </ul>
-        <h4>Tools:</h4>
+        <h3>Tools and Version Control</h3>
         <ul>
-            <li><strong>Git</strong>: Confident with version control with both Git command-line operations and VSCode integration</li>
-            <li><strong>Microsoft Azure</strong>: Machine Learning for classification, Computer Vision, model training</li>
-            <li><strong>Docker</strong>: Experience with containerisation for deployment and development</li>
+            <li><strong>Git</strong>: Confident with version control using both Git command-line operations and VSCode integration</li>
             <li><strong>VSCode</strong>: Primary IDE, with a variety of extensions for Python, Django, and React development</li>
-            <li><strong>Linux</strong>: Comfortable with the command line, and basic system administration</li>
-            <li><strong>AWS</strong>: Comfortable with AWS services and operations, currently studying for the AWS Cloud Practitioner Certification.</li>
         </ul>
-        <h4>Development Practices:</h4>
+        <h3>Development Practices</h3>
         <ul>
-            <li><strong>Full-stack web application development</strong></li>
-            <li><strong>Responsive and accessible web design principles</strong></li>
-            <li><strong>CRUD principle proficiency</strong></li>
-            <li><strong>API development and integration with JWT for authentication</strong></li>
-            <li><strong>Database integration with backend, including hashing and encryption</strong></li>
+            <li>Full-stack web application development</li>
+            <li>Responsive and accessible web design principles</li>
+            <li>CRUD principle proficiency</li>
+            <li>API development and integration with JWT for authentication</li>
+            <li>Database integration with backend, including hashing and encryption</li>
         </ul>
 
     <h2>Generic Work Experience</h2>

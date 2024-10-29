@@ -10,8 +10,8 @@ body {
 
 .container {
     max-width: 700px;
-    margin: 20px auto;
-    padding: 40px;
+    margin: 10px auto;
+    padding: 30px;
     border-radius: 10px;
     border: 1px solid rgba(201, 209, 217, 1);
 }
@@ -22,7 +22,12 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     color: #c9d1d9;
-    margin-top: 0;
+    margin: 5px 0;
+    padding: 0;
+}
+
+ul {
+    margin: 5px 0;
 }
 
 a {
@@ -34,10 +39,14 @@ a:hover {
     text-decoration: underline;
 }
 
+p {
+    margin: 5px 0;
+}
+
 @media only screen and (max-width: 600px) {
     body {
-        font-size: 20px;
-        padding: 10px;
+        font-size: 18px;
+        padding: 2px;
         margin: auto 0;
     }
     
@@ -66,13 +75,21 @@ a:hover {
     }
 }
 
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: row;
+    }
+}
+
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    padding: 10px 0;
 }
 
 .navbar ul {
     list-style: none;
+    display: flex;
     margin: 0;
     padding: 0;
 }

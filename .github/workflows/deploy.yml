@@ -20,14 +20,14 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: eu-west-2
 
-    - name: Sync S3 bucket
-      run: |
-        aws s3 sync cloud-resume-challenge/ s3://will-hick-cloud-cv --delete --exclude "*" --include "index.html" --include "style.css"
-
     - name: Install AWS CLI
       run: |
         sudo apt-get update
         sudo apt-get install -y awscli
+    
+    - name: Sync S3 bucket
+      run: |
+        aws s3 sync cloud-resume-challenge/ s3://will-hick-cloud-cv --delete --exclude "*" --include "index.html" --include "style.css"
 
     - name: Invalidate CloudFront cache
       run: |

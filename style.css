@@ -135,3 +135,22 @@ p {
 .social-icon svg {
     cursor: pointer;
 }
+
+.website-details {
+    color: #c9d1d9;
+    text-decoration: none;
+    animation: pulse 4s infinite;
+}
+
+@keyframes pulse {
+     0%, 25%, 75%, 100% {
+        text-shadow: 0 0 0px #c9d1d9;
+    }
+    50% {
+        text-shadow: 0 0 15px #c9d1d9;
+    }
+}
+
+summary::marker {
+    content: none;
+}
